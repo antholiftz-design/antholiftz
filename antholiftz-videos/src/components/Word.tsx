@@ -1,5 +1,5 @@
 import { makeTransform, scale, translateY } from "@remotion/animation-utils";
-import { loadFont } from "@remotion/google-fonts/BreeSerif";
+import { loadFont } from "@remotion/google-fonts/Oswald";
 import { fitText } from "@remotion/layout-utils";
 import type React from "react";
 import { AbsoluteFill, interpolate, useVideoConfig } from "remotion";
@@ -34,15 +34,17 @@ export const Word: React.FC<{
       <div
         style={{
           fontSize,
-          color: "white",
-          WebkitTextStroke: stroke ? "20px black" : undefined,
+          color: stroke ? "transparent" : "#ffffff",
+          WebkitTextStroke: stroke ? `18px #f97316` : undefined,
           transform: makeTransform([
             scale(interpolate(enterProgress, [0, 1], [0.8, 1])),
             translateY(interpolate(enterProgress, [0, 1], [50, 0])),
           ]),
           fontFamily,
+          fontWeight: 700,
           textTransform: "uppercase",
           textAlign: "center",
+          letterSpacing: 2,
         }}
       >
         {text}

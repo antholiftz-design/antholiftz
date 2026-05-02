@@ -1,4 +1,4 @@
-import { loadFont } from "@remotion/google-fonts/BreeSerif";
+import { loadFont } from "@remotion/google-fonts/Oswald";
 import { Audio } from "@remotion/media";
 import { AbsoluteFill, Sequence, staticFile, useVideoConfig } from "remotion";
 import { z } from "zod";
@@ -24,7 +24,7 @@ export const AIVideo: React.FC<z.infer<typeof aiVideoSchema>> = ({
   const { id } = useVideoConfig();
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "white" }}>
+    <AbsoluteFill style={{ backgroundColor: "#0a0a0a" }}>
       <Sequence durationInFrames={INTRO_DURATION}>
         <AbsoluteFill
           style={{
@@ -32,24 +32,52 @@ export const AIVideo: React.FC<z.infer<typeof aiVideoSchema>> = ({
             alignItems: "center",
             textAlign: "center",
             display: "flex",
+            flexDirection: "column",
+            gap: 24,
             zIndex: 10,
+            background:
+              "linear-gradient(160deg, #0a0a0a 0%, #1a1a1a 60%, #0a0a0a 100%)",
           }}
         >
           <div
             style={{
-              fontSize: 120,
-              lineHeight: "122px",
-              width: "87%",
-              color: "black",
+              fontSize: 72,
+              letterSpacing: 12,
+              color: "#f97316",
               fontFamily,
+              fontWeight: 700,
               textTransform: "uppercase",
-              backgroundColor: "yellow",
-              paddingTop: 20,
-              paddingBottom: 20,
-              border: "10px solid black",
+            }}
+          >
+            ANTHOLIFTZ
+          </div>
+          <div
+            style={{
+              fontSize: 96,
+              lineHeight: "100px",
+              width: "87%",
+              color: "#ffffff",
+              fontFamily,
+              fontWeight: 700,
+              textTransform: "uppercase",
+              borderTop: "4px solid #f97316",
+              borderBottom: "4px solid #f97316",
+              paddingTop: 24,
+              paddingBottom: 24,
             }}
           >
             {timeline.shortTitle}
+          </div>
+          <div
+            style={{
+              fontSize: 36,
+              color: "#9ca3af",
+              fontFamily,
+              textTransform: "uppercase",
+              letterSpacing: 6,
+            }}
+          >
+            ONLINE FITNESS COACHING
           </div>
         </AbsoluteFill>
       </Sequence>
