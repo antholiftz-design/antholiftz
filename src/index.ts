@@ -1,0 +1,1 @@
+export { PromoVideo } from "./Promo";
