@@ -6,7 +6,7 @@ import {
   interpolate,
   Easing,
 } from "remotion";
-import { DARK, GOLD, WHITE } from "../constants";
+import { DARK, GREEN, WHITE } from "../constants";
 
 export const CTA: React.FC = () => {
   const frame = useCurrentFrame();
@@ -64,7 +64,7 @@ export const CTA: React.FC = () => {
           width: 700,
           height: 700,
           borderRadius: "50%",
-          border: `2px solid ${GOLD}18`,
+          border: `2px solid ${GREEN}18`,
           animation: "none",
           transform: `scale(${pulse})`,
         }}
@@ -75,7 +75,7 @@ export const CTA: React.FC = () => {
           width: 520,
           height: 520,
           borderRadius: "50%",
-          border: `2px solid ${GOLD}28`,
+          border: `2px solid ${GREEN}28`,
           transform: `scale(${pulse * 0.97})`,
         }}
       />
@@ -93,13 +93,13 @@ export const CTA: React.FC = () => {
           style={{
             opacity: titleOpacity,
             display: "inline-block",
-            background: `${GOLD}22`,
-            border: `1px solid ${GOLD}55`,
+            background: `${GREEN}22`,
+            border: `1px solid ${GREEN}55`,
             borderRadius: 100,
             padding: "10px 28px",
             fontFamily: "Arial, sans-serif",
             fontSize: 22,
-            color: GOLD,
+            color: GREEN,
             letterSpacing: 4,
             textTransform: "uppercase",
             marginBottom: 32,
@@ -134,7 +134,7 @@ export const CTA: React.FC = () => {
               fontFamily: "'Arial Black', Impact, sans-serif",
               fontSize: 112,
               fontWeight: 900,
-              color: GOLD,
+              color: GREEN,
               lineHeight: 0.95,
               letterSpacing: -3,
               textTransform: "uppercase",
@@ -168,7 +168,7 @@ export const CTA: React.FC = () => {
         >
           <div
             style={{
-              background: `linear-gradient(135deg, ${GOLD} 0%, #c9a227 100%)`,
+              background: `linear-gradient(135deg, ${GREEN} 0%, #16a34a 100%)`,
               color: DARK,
               borderRadius: 20,
               padding: "28px 60px",
@@ -177,7 +177,7 @@ export const CTA: React.FC = () => {
               fontWeight: 900,
               letterSpacing: 2,
               textTransform: "uppercase",
-              boxShadow: `0 0 60px ${GOLD}55, 0 20px 40px rgba(0,0,0,0.4)`,
+              boxShadow: `0 0 60px ${GREEN}55, 0 20px 40px rgba(0,0,0,0.4)`,
               display: "inline-block",
             }}
           >
@@ -217,7 +217,7 @@ export const CTA: React.FC = () => {
             style={{
               fontFamily: "Arial, sans-serif",
               fontSize: 24,
-              color: GOLD,
+              color: GREEN,
               letterSpacing: 3,
               textTransform: "uppercase",
             }}

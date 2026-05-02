@@ -6,7 +6,7 @@ import {
   interpolate,
   Easing,
 } from "remotion";
-import { DARK, GOLD, WHITE, GRAY } from "../constants";
+import { DARK, GREEN, WHITE, GRAY } from "../constants";
 
 export const BrandReveal: React.FC = () => {
   const frame = useCurrentFrame();
@@ -55,7 +55,7 @@ export const BrandReveal: React.FC = () => {
           transform: "translateX(-50%)",
           height: 4,
           width: lineWidth,
-          background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`,
+          background: `linear-gradient(90deg, transparent, ${GREEN}, transparent)`,
         }}
       />
 
@@ -72,11 +72,11 @@ export const BrandReveal: React.FC = () => {
             width: 120,
             height: 120,
             borderRadius: 24,
-            background: `linear-gradient(135deg, ${GOLD} 0%, #c9a227 100%)`,
+            background: `linear-gradient(135deg, ${GREEN} 0%, #c9a227 100%)`,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: `0 0 60px ${GOLD}44`,
+            boxShadow: `0 0 60px ${GREEN}44`,
           }}
         >
           <span
@@ -113,7 +113,7 @@ export const BrandReveal: React.FC = () => {
           }}
         >
           antho
-          <span style={{ color: GOLD }}>liftz</span>
+          <span style={{ color: GREEN }}>liftz</span>
         </div>
       </div>
 
@@ -165,7 +165,7 @@ export const BrandReveal: React.FC = () => {
                 fontFamily: "'Arial Black', Impact, sans-serif",
                 fontSize: 56,
                 fontWeight: 900,
-                color: GOLD,
+                color: GREEN,
                 lineHeight: 1,
               }}
             >
@@ -196,7 +196,7 @@ export const BrandReveal: React.FC = () => {
           transform: "translateX(-50%)",
           height: 4,
           width: lineWidth,
-          background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`,
+          background: `linear-gradient(90deg, transparent, ${GREEN}, transparent)`,
         }}
       />
     </div>

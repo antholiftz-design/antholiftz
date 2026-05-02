@@ -6,7 +6,7 @@ import {
   interpolate,
   Easing,
 } from "remotion";
-import { DARK, GOLD, WHITE } from "../constants";
+import { DARK, GREEN, WHITE } from "../constants";
 
 const BenefitCard: React.FC<{
   icon: string;
@@ -32,7 +32,7 @@ const BenefitCard: React.FC<{
         transform: `scale(${scale})`,
         transformOrigin: "center",
         background: "linear-gradient(135deg, #1a1a0e, #141410)",
-        border: `1px solid ${GOLD}33`,
+        border: `1px solid ${GREEN}33`,
         borderRadius: 24,
         padding: "44px 36px",
         textAlign: "center",
@@ -121,7 +121,7 @@ export const Benefits: React.FC = () => {
             fontFamily: "Arial, sans-serif",
             fontSize: 22,
             letterSpacing: 8,
-            color: GOLD,
+            color: GREEN,
             textTransform: "uppercase",
             marginBottom: 12,
           }}

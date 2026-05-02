@@ -5,7 +5,7 @@ import {
   spring,
   interpolate,
 } from "remotion";
-import { DARK, GOLD, WHITE } from "../constants";
+import { DARK, GREEN, WHITE } from "../constants";
 
 export const Hook: React.FC = () => {
   const frame = useCurrentFrame();
@@ -45,7 +45,7 @@ export const Hook: React.FC = () => {
           width: 600,
           height: 600,
           borderRadius: "50%",
-          background: `radial-gradient(circle, ${GOLD}22 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${GREEN}22 0%, transparent 70%)`,
           opacity: glowOpacity,
         }}
       />
@@ -79,7 +79,7 @@ export const Hook: React.FC = () => {
             textTransform: "uppercase",
           }}
         >
-          READY TO
+          REAL PEOPLE.
         </div>
 
         <div
@@ -87,16 +87,16 @@ export const Hook: React.FC = () => {
             transform: `scale(${line2Scale})`,
             transformOrigin: "center",
             fontFamily: "'Arial Black', 'Impact', sans-serif",
-            fontSize: 112,
+            fontSize: 96,
             fontWeight: 900,
-            color: GOLD,
+            color: WHITE,
             lineHeight: 1,
-            letterSpacing: -3,
+            letterSpacing: -2,
             textTransform: "uppercase",
             marginTop: 8,
           }}
         >
-          TRANSFORM?
+          REAL RESULTS.
         </div>
 
         {/* Accent bar */}
@@ -104,7 +104,7 @@ export const Hook: React.FC = () => {
           style={{
             height: 6,
             width: accentWidth,
-            background: GOLD,
+            background: GREEN,
             margin: "24px auto",
             borderRadius: 3,
           }}
@@ -114,15 +114,15 @@ export const Hook: React.FC = () => {
           style={{
             transform: `scale(${line3Scale})`,
             transformOrigin: "center",
-            fontFamily: "Arial, sans-serif",
-            fontSize: 36,
-            fontWeight: 400,
-            color: `${WHITE}99`,
-            letterSpacing: 8,
+            fontFamily: "'Arial Black', Impact, sans-serif",
+            fontSize: 80,
+            fontWeight: 900,
+            color: GREEN,
+            letterSpacing: -2,
             textTransform: "uppercase",
           }}
         >
-          YOUR BODY. YOUR RULES.
+          NO SHORTCUTS.
         </div>
       </div>
     </div>

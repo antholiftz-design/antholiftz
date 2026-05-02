@@ -2,40 +2,37 @@ import React from "react";
 import { AbsoluteFill, Sequence, useCurrentFrame, interpolate } from "remotion";
 import { Hook } from "./scenes/Hook";
 import { BrandReveal } from "./scenes/BrandReveal";
-import { WebsiteMockup } from "./scenes/WebsiteMockup";
+import { ClientResults } from "./scenes/ClientResults";
 import { Benefits } from "./scenes/Benefits";
 import { CTA } from "./scenes/CTA";
 
 // Scene timing (frames @ 30fps)
-// Hook:         0  – 70   (2.3s) — punchy hook
-// BrandReveal:  60 – 150  (3s)   — brand identity
-// WebsiteMockup:140 – 270  (4.3s) — website scroll
-// Benefits:     260 – 370  (3.7s) — 3 key benefits
-// CTA:          360 – 450  (3s)   — call to action
+// Hook:          0  – 75   (2.5s)  — "REAL PEOPLE. REAL RESULTS. NO SHORTCUTS."
+// BrandReveal:   65 – 155  (3s)    — antholiftz brand identity
+// ClientResults: 145 – 295 (5s)    — before/after photos
+// Benefits:      285 – 385 (3.3s)  — 3 benefits
+// CTA:           375 – 480 (3.5s)  — call to action
+
+export const TOTAL_FRAMES = 480;
 
 const SCENES = [
-  { from: 0,   duration: 70,  Component: Hook },
-  { from: 60,  duration: 100, Component: BrandReveal },
-  { from: 140, duration: 130, Component: WebsiteMockup },
-  { from: 260, duration: 110, Component: Benefits },
-  { from: 360, duration: 90,  Component: CTA },
+  { from: 0,   duration: 75,  Component: Hook },
+  { from: 65,  duration: 100, Component: BrandReveal },
+  { from: 145, duration: 150, Component: ClientResults },
+  { from: 285, duration: 100, Component: Benefits },
+  { from: 375, duration: 105, Component: CTA },
 ] as const;
 
 const CrossFade: React.FC<{
   frame: number;
-  start: number;
-  end: number;
+  duration: number;
   children: React.ReactNode;
-}> = ({ frame, start, end, children }) => {
-  const opacity = interpolate(frame, [start, start + 8, end - 8, end], [0, 1, 1, 0], {
+}> = ({ frame, duration, children }) => {
+  const opacity = interpolate(frame, [0, 8, duration - 8, duration], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  return (
-    <AbsoluteFill style={{ opacity }}>
-      {children}
-    </AbsoluteFill>
-  );
+  return <AbsoluteFill style={{ opacity }}>{children}</AbsoluteFill>;
 };
 
 export const PromoVideo: React.FC = () => {
@@ -45,7 +42,7 @@ export const PromoVideo: React.FC = () => {
     <AbsoluteFill style={{ background: "#0a0a0a" }}>
       {SCENES.map(({ from, duration, Component }) => (
         <Sequence key={from} from={from} durationInFrames={duration}>
-          <CrossFade frame={frame - from} start={0} end={duration}>
+          <CrossFade frame={frame - from} duration={duration}>
             <AbsoluteFill>
               <Component />
             </AbsoluteFill>

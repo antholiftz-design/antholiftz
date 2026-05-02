@@ -6,7 +6,7 @@ import {
   interpolate,
   Easing,
 } from "remotion";
-import { DARK, GOLD, WHITE, DARK_CARD } from "../constants";
+import { DARK, GREEN, WHITE, DARK_CARD } from "../constants";
 
 const MockSection: React.FC<{
   delay: number;
@@ -29,10 +29,10 @@ const MockSection: React.FC<{
       style={{
         opacity,
         transform: `translateX(${x}px)`,
-        background: accent ? `linear-gradient(135deg, ${GOLD}18, ${GOLD}08)` : DARK_CARD,
+        background: accent ? `linear-gradient(135deg, ${GREEN}18, ${GREEN}08)` : DARK_CARD,
         borderRadius: 16,
         padding: "24px 28px",
-        borderLeft: accent ? `4px solid ${GOLD}` : `4px solid #ffffff18`,
+        borderLeft: accent ? `4px solid ${GREEN}` : `4px solid #ffffff18`,
         marginBottom: 16,
       }}
     >
@@ -41,7 +41,7 @@ const MockSection: React.FC<{
           fontFamily: "'Arial Black', Impact, sans-serif",
           fontSize: 28,
           fontWeight: 700,
-          color: accent ? GOLD : WHITE,
+          color: accent ? GREEN : WHITE,
           marginBottom: 6,
         }}
       >
@@ -123,7 +123,7 @@ export const WebsiteMockup: React.FC = () => {
           background: "#1a1a1a",
           border: "8px solid #333",
           overflow: "hidden",
-          boxShadow: `0 40px 120px rgba(0,0,0,0.8), 0 0 60px ${GOLD}22`,
+          boxShadow: `0 40px 120px rgba(0,0,0,0.8), 0 0 60px ${GREEN}22`,
           position: "relative",
         }}
       >
@@ -186,7 +186,7 @@ export const WebsiteMockup: React.FC = () => {
                 width: 120,
                 height: 120,
                 borderRadius: "50%",
-                background: `${GOLD}15`,
+                background: `${GREEN}15`,
               }}
             />
             <div
@@ -213,7 +213,7 @@ export const WebsiteMockup: React.FC = () => {
             </div>
             <div
               style={{
-                background: GOLD,
+                background: GREEN,
                 color: DARK,
                 borderRadius: 12,
                 padding: "12px 28px",
@@ -265,7 +265,7 @@ export const WebsiteMockup: React.FC = () => {
               borderRadius: 16,
               padding: "24px",
               marginTop: 8,
-              borderTop: `2px solid ${GOLD}`,
+              borderTop: `2px solid ${GREEN}`,
             }}
           >
             <div
@@ -283,7 +283,7 @@ export const WebsiteMockup: React.FC = () => {
               style={{
                 fontFamily: "Arial, sans-serif",
                 fontSize: 16,
-                color: GOLD,
+                color: GREEN,
               }}
             >
               — Client Success Story ★★★★★
